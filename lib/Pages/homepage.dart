@@ -353,11 +353,8 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
                       style: GoogleFonts.fredokaOne(
                           fontSize: 20, color: Colors.white),
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
                     Container(
-                      height: size.height * 0.08,
+                      height: size.height * 0.06,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: nameflavor.length,
@@ -374,9 +371,8 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
                       style: GoogleFonts.fredokaOne(
                           fontSize: 20, color: Colors.white),
                     ),
-                    SizedBox(height: 5,),
                     Container(
-                      height: size.height * 0.08,
+                      height: size.height * 0.07,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: namecolor.length,
@@ -392,11 +388,8 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
                       style: GoogleFonts.fredokaOne(
                           fontSize: 20, color: Colors.white),
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
                     Container(
-                      height: size.height * 0.08,
+                      height: size.height * 0.06,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: nameshape.length,
@@ -408,7 +401,7 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.circular(10.0)),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     Center(
                       child: Container(
@@ -433,7 +426,7 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     )
                   ],
                 ),
@@ -445,162 +438,6 @@ class _MyHomepageState extends State<MyHomepage> with TickerProviderStateMixin {
     );
   }
 
-  void _buttonpopuptextfield(context) {
-    showModalBottomSheet(
-        context: context,
-        backgroundColor: Colors.transparent,
-        builder: (BuildContext btp) {
-          return ListView(
-            children: [
-              Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Colors.white,
-                  ),
-                  height: MediaQuery.of(context).size.height,
-                  //padding: EdgeInsets.only(left: 10, right: 10),
-                  child: CustomScrollView(
-                    slivers: <Widget>[
-                      SliverAppBar(
-                        pinned: true,
-                        automaticallyImplyLeading: false,
-                        backgroundColor: Colors.transparent,
-                        title: Text(
-                          "បន្ថែមពត៍មានពីនំ",
-                          style: GoogleFonts.fredokaOne(
-                              fontSize: 20, color: Colors.black54),
-                        ),
-                        actions: <Widget>[
-                          IconButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              icon: Icon(
-                                FontAwesomeIcons.checkCircle,
-                                size: 30,
-                                color: Color(0xffff4b1f),
-                              )),
-                        ],
-                      ),
-                      SliverToBoxAdapter(
-                        child: Container(
-                          padding: EdgeInsets.only(left: 10, right: 10),
-                          height: MediaQuery.of(context).size.height * 0.15,
-                          //color: Colors.purple.withOpacity(0.2),
-                          child: TextField(
-                            decoration: InputDecoration(
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Color(0xffff4b1f))),
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
-                                hintText: "Description"),
-                            maxLines: 4,
-                          ),
-                        ),
-                      ),
-                      SliverToBoxAdapter(
-                        child: Container(
-                          padding:
-                              EdgeInsets.only(left: 10, top: 10, right: 10),
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          //color: Colors.yellow,
-                          child: Row(
-                            children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Type of food",
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 15, color: Color(0xffff4b1f)),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Coffee・Ice Cream,Thai",
-                                    style: GoogleFonts.abel(
-                                        fontSize: 15, color: Colors.black),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      SliverToBoxAdapter(
-                        child: Container(
-                          padding:
-                              EdgeInsets.only(left: 10, top: 10, right: 10),
-                          height: MediaQuery.of(context).size.height * 0.15,
-                          //color: Colors.yellow,
-                          child: Row(
-                            children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Address",
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 15, color: Color(0xffff4b1f)),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "#184,St 155 \nSangkat Toul Tompong \n Khan Chomkamorn \n Phnom Penh",
-                                    style: GoogleFonts.abel(
-                                        fontSize: 15, color: Colors.black),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      SliverToBoxAdapter(
-                        child: Container(
-                          //color: Colors.yellow,
-                          padding: EdgeInsets.only(left: 10, right: 10),
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          //color: Colors.yellow,
-                          child: Row(
-                            children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Contact",
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 15, color: Color(0xffff4b1f)),
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "081 828 288 / 015 704 034",
-                                    style: GoogleFonts.abel(
-                                        fontSize: 15, color: Colors.black),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-//                  SliverFillRemaining(
-//                    child: Container(),
-//                  )
-                    ],
-                  )),
-            ],
-          );
-        });
-  }
 }
 
 class buildHeaderDelegate extends SliverPersistentHeaderDelegate {
